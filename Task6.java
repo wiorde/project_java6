@@ -11,13 +11,11 @@ public class Task6 {
         System.out.println("Информация о транспорте");
         for (Transport t:garage) {
             System.out.println(t.toString());
-            System.out.println("Двигатель: "+getEngineInfo(t));
-        }
+            System.out.println("Двигатель: "+getEngineInfo(t));}
         System.out.println("Сортировка по скорости");
         Arrays.sort(garage);
         for (Transport t:garage) {
-            System.out.println(t.toString());
-        }
+            System.out.println(t.toString());}
         System.out.println("Тест исключения");
         try {
             LicensePlate badPlate=new LicensePlate(null,"RU");
@@ -91,7 +89,6 @@ sealed abstract class Transport implements Comparable<Transport> permits Car,Bic
     }
     public abstract String getDescription();
 }
-
 final class Car extends Transport {
     private FuelType fuel;
     private LicensePlate plate;
